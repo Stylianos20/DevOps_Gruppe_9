@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api-service:
+    image: ghcr.io/uralmahmut/devops/devops-api-image:latest
+    ports:
+      - "8080:8080"
+    container_name: devops-spring-api
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      - DOCKER_API_VERSION=1.44
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 --cleanup
