@@ -1,0 +1,54 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # Notwendig für den GHCR-Upload
+
+    steps:
+    - name: Code auschecken
+      uses: actions/checkout@v3
+
+    - name: Java JDK 17 einrichten
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Mit Maven kompilieren und testen
+      run: mvn clean package
+
+    - name: Docker Image bauen (Lokal für Test laden)
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        load: true
+        tags: devops-api-image:test
+
+    - name: Container starten
+      run: docker run -d -p 8080:8080 --name test-api devops-api-image:test
+
+    - name: An GitHub Container Registry anmelden
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Docker Image in Registry pushen
+      if: github.event_name != 'pull_request'
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        push: true
+        tags: ghcr.io/uralmahmut/devops/devops-api-image:latest
