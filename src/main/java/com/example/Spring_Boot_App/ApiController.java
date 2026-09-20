@@ -13,7 +13,7 @@ public class ApiController {
 
     @GetMapping("/thema")
     public String getThema() {
-        return "Aufbau und Erweiterung einer CI/CD-Pipeline für ein Softwareprojekt";
+        return "Aufbau und Erweiterung einer CI/CD-Pipeline für ein Softwareprojekt Heute morgen";
     }
 
     @GetMapping("/mitglieder")
