@@ -51,4 +51,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/uralmahmut/devops/devops-api-image:latest
+        tags: ghcr.io/stylianos20/devops_gruppe_9/devops-api-image:latest
