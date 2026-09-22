@@ -21,7 +21,6 @@ Für den Start werden benötigt:
 - Git
 - Docker Desktop bzw. Docker Engine
 - Docker Compose v2
-- Internetzugang
 
 Docker Desktop muss vor dem Start der Anwendung geöffnet sein.
 
