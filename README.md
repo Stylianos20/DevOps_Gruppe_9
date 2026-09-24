@@ -16,15 +16,55 @@ Der grundlegende Ablauf ist:
 
 ## Voraussetzungen
 
-Für den Start werden benötigt:
+Bevor das Projekt gestartet werden kann, müssen einige Programme auf dem Rechner installiert sein.
 
-- Git
-- Docker Desktop bzw. Docker Engine
-- Docker Compose v2
+### Git
 
-Docker Desktop muss vor dem Start der Anwendung geöffnet sein.
+Git wird benötigt, um das Projekt von GitHub auf den eigenen Rechner herunterzuladen.
+
+Download:
+
+[Git für Windows herunterladen](https://git-scm.com/install/windows)
 
 ---
+
+### Docker Desktop
+
+Docker Desktop wird benötigt, um die Anwendung als Docker-Container zu starten.
+
+Docker Compose ist bereits in Docker Desktop enthalten und muss nicht zusätzlich installiert werden.
+
+Download:
+
+[Docker Desktop herunterladen](https://www.docker.com/products/docker-desktop/)
+
+Wichtig: Docker Desktop muss vor dem Start der Anwendung geöffnet sein.
+
+---
+
+### Java JDK 17
+
+Java 17 wird benötigt, wenn die Spring-Boot-Anwendung direkt aus dem Quellcode gebaut werden soll.
+
+Download:
+
+[Java JDK 17 herunterladen](https://adoptium.net/de/temurin/releases?version=17)
+
+---
+
+### Apache Maven
+
+Maven wird für den Build der Anwendung verwendet.
+
+Download:
+
+[Apache Maven herunterladen](https://maven.apache.org/download.cgi)
+
+Direkter Download:
+
+[Apache Maven 3.9.16 herunterladen](https://dlcdn.apache.org/maven/maven-3/3.9.16/binaries/apache-maven-3.9.16-bin.zip)
+
+--- 
 
 ## Installation prüfen
 
