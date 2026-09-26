@@ -40,8 +40,7 @@ jobs:
     - name: HTTP-Status prüfen (mit Retry)
       run: |
         echo "Warte auf Anwendung..."
-        URL="http://localhost:8080/api/abgabedatum" # Bitte anpassen, falls ein anderer Endpunkt getestet werden soll (z.B. /api/health)
-        
+        URL="http://localhost:8080/api/abgabedatum"
         for i in {1..10}; do
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" $URL || echo "000")
           
