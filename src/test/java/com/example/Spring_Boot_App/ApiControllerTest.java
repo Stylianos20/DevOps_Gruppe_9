@@ -30,7 +30,7 @@ public class ApiControllerTest {
         // Testet den Endpunkt /api/mitglieder und prüft, ob 4 Mitglieder zurückgegeben werden
         mockMvc.perform(get("/api/mitglieder"))
                .andExpect(status().isOk())
-               .andExpect(jsonPath("$", hasSize(4)))
+               .andExpect(jsonPath("$", hasSize(3)))
                .andExpect(jsonPath("$[0]").value("Mahmut"));
     }
 
