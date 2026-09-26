@@ -25,7 +25,7 @@ public class ApiController {
     
     @GetMapping("/abgabedatum")
     public String getAbgabeDatum() {
-        return "AbgabeDatum ist der 28.09.2027";
+        return "AbgabeDatum ist der 28.09.2026";
     }
 
     @GetMapping("/test-security")

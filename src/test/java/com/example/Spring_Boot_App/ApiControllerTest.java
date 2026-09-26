@@ -22,7 +22,7 @@ public class ApiControllerTest {
         // Testet den Endpunkt /api/thema
         mockMvc.perform(get("/api/thema"))
                .andExpect(status().isOk())
-               .andExpect(content().string("Aufbau und Erweiterung einer CI/CD-Pipeline für ein Softwareprojekt Heute morgen"));
+               .andExpect(content().string("Aufbau und Erweiterung einer CI/CD-Pipeline für ein Softwareprojekt."));
     }
 
     @Test
@@ -31,7 +31,7 @@ public class ApiControllerTest {
         mockMvc.perform(get("/api/mitglieder"))
                .andExpect(status().isOk())
                .andExpect(jsonPath("$", hasSize(4)))
-               .andExpect(jsonPath("$[0]").value("Mitglied 1"));
+               .andExpect(jsonPath("$[0]").value("Mahmut"));
     }
 
     @Test
@@ -39,6 +39,6 @@ public class ApiControllerTest {
         // Testet den Endpunkt /api/abgabedatum
         mockMvc.perform(get("/api/abgabedatum"))
                .andExpect(status().isOk())
-               .andExpect(content().string("AbgabeDatum ist der 24.10.2028"));
+               .andExpect(content().string("AbgabeDatum ist der 28.09.2026"));
     }
 }
