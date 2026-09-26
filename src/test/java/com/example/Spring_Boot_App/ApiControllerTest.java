@@ -36,7 +36,7 @@ public class ApiControllerTest {
 
     @Test
     public void testGetAbgabeDatum() throws Exception {
-        // Testet den Endpunkt /api/abgabedatum
+        // Testet den Endpunkt /api/abgabedatum x
         mockMvc.perform(get("/api/abgabedatum"))
                .andExpect(status().isOk())
                .andExpect(content().string("AbgabeDatum ist der 28.09.2026"));
