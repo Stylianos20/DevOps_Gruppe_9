@@ -14,18 +14,18 @@ public class ApiController {
 
     @GetMapping("/thema")
     public String getThema() {
-        return "Aufbau und Erweiterung einer CI/CD-Pipeline für ein Softwareprojekt Heute morgen";
+        return "Aufbau und Erweiterung einer CI/CD-Pipeline für ein Softwareprojekt.";
     }
 
     @GetMapping("/mitglieder")
     public List<String> getMitglieder() {
         // Trage hier eure echten Namen ein
-        return Arrays.asList("Mitglied 1", "Mitglied 2", "Mitglied 3", "Mitglied 4");
+        return Arrays.asList("Mahmut", "Yasmina", "Styli");
     }
     
     @GetMapping("/abgabedatum")
     public String getAbgabeDatum() {
-        return "AbgabeDatum ist der 24.10.2028";
+        return "AbgabeDatum ist der 28.09.2027";
     }
 
     @GetMapping("/test-security")
