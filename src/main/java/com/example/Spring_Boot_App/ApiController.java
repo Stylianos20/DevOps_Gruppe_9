@@ -28,7 +28,7 @@ public class ApiController {
         return "AbgabeDatum ist der 28.09.2026";
     }
 
-    @GetMapping("/test-security")
+    @GetMapping("/test-security-2")
     public String testSecurity(@RequestParam("input") String input) {
     // Dies provoziert oft eine CodeQL-Warnung (Log Forging / Unchecked Input)
     System.out.println("Benutzereingabe: " + input); 
