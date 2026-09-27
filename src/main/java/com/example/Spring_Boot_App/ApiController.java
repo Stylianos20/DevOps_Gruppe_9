@@ -20,7 +20,7 @@ public class ApiController {
     @GetMapping("/mitglieder")
     public List<String> getMitglieder() {
         // Trage hier eure echten Namen ein
-        return Arrays.asList("Mahmut", "Yasmina", "StyliDemo");
+        return Arrays.asList("Mahmut", "Yasmina", "Styli");
     }
     
     @GetMapping("/abgabedatum")
