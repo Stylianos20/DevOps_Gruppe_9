@@ -36,4 +36,5 @@ public class ApiController {
         System.out.println("Benutzereingabe: " + input); 
         return "Test: " + input;
     }
+    
 }
